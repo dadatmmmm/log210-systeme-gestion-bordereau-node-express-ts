@@ -9,7 +9,7 @@ import { studentRouter } from './routes/StudentRouter';
 import { teacherRouter } from './routes/TeacherRouter';
 import { healtRouter } from './routes/HealtRouter';
 import { gradeRouter} from './routes/GradeRouter';
-
+import { requireJwtMiddleware} from './jwt/VeriyToken';
 
 // Creates and configures an ExpressJS web server.
  
@@ -30,6 +30,7 @@ class App {
     this.express.use(logger('dev'));
     this.express.use(express.json());
     this.express.use(express.urlencoded({ extended: false }));
+    this.express.use("/api/v3/teacher/fromtoken", requireJwtMiddleware);
   }
 
   // Configure API endpoints.

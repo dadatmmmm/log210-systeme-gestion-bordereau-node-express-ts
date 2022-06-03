@@ -59,4 +59,28 @@ export interface GradeJSON {
   note: number;
 }
 
+export interface Session {
+  id: string;
+  date: number;
+  issued: number;
+  expires: number;
+}
+
+export interface EncodeResult {
+  token: string,
+  expires: number,
+  issued: number
+}
+
+export type DecodeResult =
+  | {
+        type: "Valide" | "Token invalide" | "Erreur d'intégrité";
+        session: Session;
+        id: string;
+    }
+
+export type ExpirationStatus = "expired" | "active" | "grace";
+
+export type PartialSession = Omit<Session, "issued" | "expires">;
+
 
