@@ -9,7 +9,7 @@ import { studentRouter } from './routes/StudentRouter';
 import { teacherRouter } from './routes/TeacherRouter';
 import { healtRouter } from './routes/HealtRouter';
 import { gradeRouter} from './routes/GradeRouter';
-import { requireJwtMiddleware} from './jwt/VeriyToken';
+import { requireJwtMiddleware} from './jwt/VerifyToken';
 
 // Creates and configures an ExpressJS web server.
  

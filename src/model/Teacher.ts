@@ -2,7 +2,7 @@ import md5 = require('md5');
 import  { TeacherJSON, DecodeResult } from '.';
 import { encodeSession } from '../jwt/Encode';
 import { decodeSession } from '../jwt/Decode';
-import { SECRET } from '../jwt/VeriyToken';
+import { SECRET } from '../jwt/VerifyToken';
 
 export class Teacher  {
 
